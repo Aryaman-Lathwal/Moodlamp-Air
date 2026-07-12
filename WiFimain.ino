@@ -231,7 +231,7 @@ Thunderstorm
 Sunrise
 </button>
 
-<button onclick="fetch('/sunrise')">
+<button onclick="fetch('/sunset')">
 Sunset
 </button>
 

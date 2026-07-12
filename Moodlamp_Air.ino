@@ -1,5 +1,6 @@
 #include <WiFi.h>
 #include <WebServer.h>
+#include "wifi_secrets.h"
 
 WebServer server(80);
 
@@ -526,10 +527,7 @@ void setup() {
   ledcAttach(greenPin, 5000, 8);
   ledcAttach(bluePin, 5000, 8);
 
-  const char* homessid = "wifi_name";         //
-  const char* homepassword = "wifi_password"; //
-                                              //
-  WiFi.begin(homessid, homepassword);         //
+  WiFi.begin(homessid, password);             //
   Serial.print("Connecting");                 //
   wifisearchtime = millis();                  //
   while(WiFi.status() != WL_CONNECTED)        //
